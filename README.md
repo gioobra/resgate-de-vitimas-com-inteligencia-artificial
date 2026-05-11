@@ -1,8 +1,11 @@
+
+# Dicas
+
 pyproject.toml -> requirements.txt
 dicas MLP
     *Pesos* **Treinamento por batelada ou por padrão**
         Inicializar aleatoriamente os pesos no invervalo [-1, 1]
-    *Bias* **Lembrar de incluir os limiares no conjunto de pesos** 
+    *Bias* **Lembrar de incluir os limiares no conjunto de pesos**
         associados com entradas fixa em -1
     *Entradas* **Normalizar as entradas:**
         [0.1, 0.9] sigmoide

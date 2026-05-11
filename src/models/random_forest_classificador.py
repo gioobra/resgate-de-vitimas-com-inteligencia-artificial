@@ -4,11 +4,11 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 from features.normalizacao import NormalizadorSinaisVitais
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 class ClassificadorSinaisVitais:
-    def __init__(self, arquivo_dados='02_treino_sinais_vitais_com_label.txt', tipo_modelo='random_forest'):
+    def __init__(self, arquivo_dados='02_treino_sinais_vitais_com_label.txt'):
         self.arquivo_dados = arquivo_dados
         self.normalizador = NormalizadorSinaisVitais(self.arquivo_dados)
         self.modelo = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -32,6 +32,6 @@ class ClassificadorSinaisVitais:
         return self.modelo, y_test, y_pred
 
 if __name__ == "__main__":
-    classificador_rf = ClassificadorSinaisVitais(tipo_modelo='random_forest')
-    modelo_rf, y_test_rf, y_pred_rf = classificador_rf.treinar_e_avaliar()
+    classificador_cart = ClassificadorSinaisVitais()
+    modelo_cart, y_test_cart, y_pred_cart = classificador_cart.treinar_e_avaliar()
     
