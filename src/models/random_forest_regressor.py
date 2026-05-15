@@ -2,7 +2,7 @@ import sys
 import pandas as pd
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
-from features.normalizacao import NormalizadorSinaisVitais
+from resgate.src.normalizacao import NormalizadorSinaisVitais
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import root_mean_squared_error, r2_score

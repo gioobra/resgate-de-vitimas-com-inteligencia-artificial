@@ -22,3 +22,11 @@ dicas MLP
             Sigmoide Xmin = 0,Xmax = 1
             TanH Xmin = -1,Xmax = 1
             Xnorm = (X - Xmin)/(Xmax - Xmin)
+
+## Organizacao
+
+    data_loader.py      # Lógica para ler arquivos da pasta data/
+    
+    normalizaco.py     # Lógica de limpeza, normalização e encoding | se estiver na tabela sem label não usar lógica da última coluna
+    modelos.py    # Instanciação dos 2 classificadores e 2 regressores
+    testes.py        # Cálculo de métricas (Acurácia, MSE, etc.)
