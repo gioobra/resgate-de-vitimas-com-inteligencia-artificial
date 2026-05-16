@@ -87,7 +87,6 @@ class ModeloAI:
         self.y_test = y_test
 
     def treinar(self):
-        # .fit() é o método padrão do sklearn para treinar qualquer modelo.
         self.modelo.fit(self.X_train, self.y_train)
 
     def avaliar_validacao(self):
