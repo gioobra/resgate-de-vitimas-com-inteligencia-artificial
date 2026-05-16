@@ -1,8 +1,3 @@
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
-from sklearn.neural_network import MLPClassifier, MLPRegressor
-import sys
-from pathlib import Path
 import sys
 from pathlib import Path
 
@@ -14,7 +9,6 @@ sys.path.append(str(Path(__file__).parent))
 from testes import Testes
 from normalizacao import NormalizadorSinaisVitais
 from data_loader import DataLoader
-
 
 class ModeloAI:
     def __init__(self, tipo_modelo, metricas, config):
