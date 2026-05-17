@@ -1,5 +1,3 @@
-
-# Dicas
 # 🫀 Classificação de Sinais Vitais com ML
 
 Sistema de aprendizado de máquina para classificação e regressão de sinais vitais, com suporte a **Random Forest** e **MLP (Multi-Layer Perceptron)**, configurável via arquivo YAML.
