@@ -1,0 +1,54 @@
+# Opções possíveis:
+# "Random Forest Classificador", "Random Forest Regressor", "MLP Classificador", "MLP Regressor"
+modelo_ativo: "MLP Classificador"
+
+# Caminhos dos arquivos:
+dados:
+  treino: "data/02_treino_sinais_vitais_com_label.txt"
+  teste:  "data/01_treino_sinais_vitais_sem_label.txt"
+  saida:  "data/resultado_predicoes.csv"
+
+# Divisão entre Treino/Teste
+split:
+  test_size: 0.2
+  random_state: 42
+
+# Parâmetros — MLP
+mlp:
+  hidden_layer_sizes: [16, 8]
+
+  # Opções possíveis:
+  # "relu", "tanh", "logistic"
+  activation: "relu"
+
+  # Opções possíveis:
+  # "adam", "sgd", "lbfgs"
+  solver: "adam"
+
+  learning_rate_init: 0.001
+  max_iter: 1000
+  random_state: 42
+
+# Parâmetros — RANDOM FOREST
+random_forest:
+  n_estimators: 100
+  max_depth: null
+
+  # Opções:
+  # "gini", "entropy"
+  criterion: "gini"
+
+  random_state: 42
+
+# Métricas
+metricas:
+  classificacao:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1"
+    - "confusion_matrix"
+  regressao:
+    - "rmse"
+    - "mae"
+    - "r2"
